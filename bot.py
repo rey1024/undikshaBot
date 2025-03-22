@@ -108,17 +108,11 @@ async def verify_nomor(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     f"⚠️ Nama akun Anda berbeda.\n"
                     f"Data: {nama_peserta}\nAkun: {update.message.from_user.full_name}\n"
                     f"Silakan ubah nama jadi: {nama_peserta}\n"
-                    f"Anda tidak bisa mengirim pesan sebelum mengubah nama anda!"
                 )
 
             except:
                 await update.message.reply_text("⚠️ Tidak bisa kirim DM. Silakan chat bot ini.")
-        else :
-            await context.bot.restrict_chat_member(
-                chat_id=chat_id,
-                user_id=user_id,
-                permissions=ChatPermissions(can_send_messages=True)
-            )
+
         # Hapus flag
         context.chat_data[user_id]['awaiting_verification'] = False
     else:
@@ -143,8 +137,8 @@ VERIFIKASI_TOPIC_ID = 87  # Ganti dengan ID topic hasil print
 
 async def command_verifikasi(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print(update.message.message_thread_id)
-    if update.message.message_thread_id != VERIFIKASI_TOPIC_ID:
-        return  # Abaikan jika bukan di topic verifikasiSNBP
+    #if update.message.message_thread_id != VERIFIKASI_TOPIC_ID:
+    #    return  # Abaikan jika bukan di topic verifikasiSNBP
 
     user_id = update.message.from_user.id
     user_name = update.message.from_user.first_name
