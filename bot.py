@@ -16,7 +16,7 @@ registrasi_map = dict(zip(df['No_Registrasi'], df['Nama']))
 
 verified_users = {}  # user_id: True
 verified_file = 'verified_users.csv'
-BOT_TOKEN = '1155987649:AAHLKUo9AkUNFEtSKoJgz4m20femxejdP5o'  # Ganti token BotFather
+BOT_TOKEN = ''  # Ganti token BotFather
 txtVerifikasi="🔒 Anda diberikan waktu 5 menit untuk verifikasi, siapkan no peserta SNBP. Jika tidak verifikasi maka akan dikeluarkan dari grup ini."
 
 
