@@ -1,0 +1,9 @@
+# Abaikan semua file dan folder
+*
+
+# Kecualikan file berikut agar tetap dipush
+!bot.py
+!data_lulus.xlsx
+
+# Jangan abaikan folder .git (biar Git tetap berfungsi)
+!.gitignore
