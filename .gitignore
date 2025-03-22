@@ -7,3 +7,4 @@
 
 # Jangan abaikan folder .git (biar Git tetap berfungsi)
 !.gitignore
+verified_users.csv
